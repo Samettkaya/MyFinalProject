@@ -17,6 +17,11 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
+        public void Add(Product product)
+        {
+            _productDal.Add(product);
+        }
+
         public List<Product> GetAll()
         {
             // İş kodları
@@ -28,6 +33,11 @@ namespace Business.Concrete
         public List<Product> GetAllByCategoryId(int id)
         {
             return _productDal.GetAll(p => p.CategoryId == id);
+        }
+
+        public void GetById(Product product)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Product> GetByUnitPrice(decimal min, decimal max)
