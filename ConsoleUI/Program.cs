@@ -35,7 +35,7 @@ namespace ConsoleUI
             {
                 foreach (var product in result.Data)
                 {
-                    Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+                    Console.WriteLine(product.ProductName + "/" + product.ProductName);
                 }
             }
             else
