@@ -29,7 +29,12 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
-       [ValidationAspect(typeof(ProductValidator))] 
+        //  Claim 
+        // Encryption , Hashing 
+        // salting  
+
+       // [SecuredOperation("product.add")]
+        [ValidationAspect(typeof(ProductValidator))] 
         public IResult Add(Product product)
         {
             // Bir kategoride en fazla 10 ürün olabilir
